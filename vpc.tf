@@ -94,7 +94,7 @@ resource "aws_route_table_association" "public-b" {
 
 resource "aws_subnet" "private-a" {
   vpc_id            = aws_vpc.eks.id
-  cidr_block        = "10.0.1.0/22"
+  cidr_block        = "10.0.0.0/22"
   availability_zone = "${var.aws_region}a"
 
   tags = {
@@ -105,7 +105,7 @@ resource "aws_subnet" "private-a" {
 
 resource "aws_subnet" "private-b" {
   vpc_id            = aws_vpc.eks.id
-  cidr_block        = "10.0.5.0/22"
+  cidr_block        = "10.0.4.0/22"
   availability_zone = "${var.aws_region}b"
 
   tags = {
@@ -116,7 +116,7 @@ resource "aws_subnet" "private-b" {
 
 resource "aws_subnet" "public-a" {
   vpc_id            = aws_vpc.eks.id
-  cidr_block        = "10.0.9.0/22"
+  cidr_block        = "10.0.8.0/22"
   availability_zone = "${var.aws_region}a"
   map_public_ip_on_launch = true
 
@@ -128,7 +128,7 @@ resource "aws_subnet" "public-a" {
 
 resource "aws_subnet" "public-b" {
   vpc_id            = aws_vpc.eks.id
-  cidr_block        = "10.0.13.0/22"
+  cidr_block        = "10.0.12.0/22"
   availability_zone = "${var.aws_region}b"
   map_public_ip_on_launch = true
 

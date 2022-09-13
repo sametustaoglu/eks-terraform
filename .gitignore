@@ -9,4 +9,6 @@ terraform.tfstate.backup
 # .tfstate files
 *.tfstate
 *.tfstate.*
-
+key-mac.pem
+*.pem
+code .
